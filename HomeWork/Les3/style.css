@@ -1,0 +1,13 @@
+.product-card{
+    background: silver;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+}
+.product-title{
+    color: cornflowerblue;
+}
+.product-img{
+    width: 200px;
+    height: 200px;
+}
