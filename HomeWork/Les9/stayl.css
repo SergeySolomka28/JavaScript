@@ -1,0 +1,47 @@
+.duration > div {
+    border: solid cornflowerblue 3px;
+
+
+}
+
+.duration {
+    display: flex;
+}
+
+.wrap {
+    border: solid red 3px;
+    width: 700px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.title {
+    color: #111ea8;
+    border: solid cornflowerblue 3px;
+    text-align: center;
+}
+
+.monthDuration {
+    width: 30%;
+}
+
+.hourDuration {
+    margin-left: 5px;
+    width: 70%;
+}
+
+.modulesUl{
+    border: solid cornflowerblue 3px;
+    padding-left: 20px;
+}
+
+.modulesUl>li:nth-child(-n + 3) {
+    display: flex;
+    margin-right: 10px;
+    list-style-type:none;
+    border: 3px solid cornflowerblue;
+    margin-top: 2px;
+}
+#text{
+    color: green;
+}
