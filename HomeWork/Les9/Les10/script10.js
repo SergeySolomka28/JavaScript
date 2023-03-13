@@ -1,22 +1,26 @@
 // Стоврити форму з трьома полями для name,surname,age та кнопкою. При натисканні на кнопку зчитати данні з полів, та вивести об'єкт в документ. Іншими словами : заповниои форму, натиснули кнопку, під формою з'явився блок з вашим об'єктом
-const form = document.forms.objekt;
-form.addEventListener('submit', function(e) {
-    e.preventDefault();
+const form = document.body.form.objekt;
+form.onsubmit = function (e) {
+    e.preventDefault()
     if (!this.name.value || this.name.value.length < 2) {
         return alert('Enter new name')
     }
+    let wrap = document.createElement('div')
+    let name = document.createElement('div')
+    let surname = document.createElement('div')
+    let age = document.createElement('div')
+    name.innerText = `${this.name.value}`
+    surname.innerText = `${this.surname.value}`
+    age.innerText = `${this.age.value}`
+    // this.name.value = '';
+    // this.surname.value = '';
+    // this.age.value = '';
+    wrap.append(name, surname, age)
+    document.body.appendChild(wrap)
 }
 
-let wrap = document.createElement('div')
-let name = document.createElement('div')
-let surname = document.createElement('div')
-let age = document.createElement('div')
-name.innerText = `${this.name.value}`
-surname.innerText = `${this.surname.value}`
-age.innerText = `${this.age.value}`
-wrap.append(name, surname, age)
-document.body.append(wrap);
-    // є сторінка, на якій є блок, я кому знаходиьтся цифра. написати код, який при кожному перезавантажені сторінки буде додавати до неї +1
+
+// є сторінка, на якій є блок, я кому знаходиьтся цифра. написати код, який при кожному перезавантажені сторінки буде додавати до неї +1
 // ==========================
 // Є сторінка index.html (назва довільна), при відвідуванні якої в локальне сховще, в масив sessions зберігається інформація про дату та час
 // відвідування сторінки. Є ще сторінка sessions.html (назва довільна), при відвідуванні якої потрібно відмалювати всю інформацію про
@@ -29,5 +33,4 @@ document.body.append(wrap);
 //
 //
 // *** Створити 3 інпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
-//     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
-// (Додатковачастина для завдання)
+//     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.(Додатковачастина для завдання)}
